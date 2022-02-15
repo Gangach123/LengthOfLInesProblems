@@ -4,14 +4,26 @@ namespace lineOfLengthProblems
 {
     class lengthoflines
     {
-        public static void Main1(string[] args)
+        public static void Main1()
         {
             Console.WriteLine("Enter Co-ordinates of 1st Line");
             double lengthOfALine = Main();
             Console.WriteLine("Enter Co-ordinates of 2nd Line");
             double lengthOfALine1 = Main();
-            string result = lengthOfALine.Equals(lengthOfALine1) == true ? "Two lines are equal" : "Two lines are not equal";
-            Console.WriteLine(result);
+            int result = lengthOfALine.CompareTo(lengthOfALine1);
+            switch(result)
+            {
+                case 0:
+                    Console.WriteLine("Two lines are equal");
+                    break;
+                case 1:
+                    Console.WriteLine("Line 1 is greater than Line 2");
+                    break;
+                default:
+                    Console.WriteLine("Line 2 is greater than Line 1");
+                    break;
+            }
+
         }
         public static double Main()
         {
@@ -28,6 +40,5 @@ namespace lineOfLengthProblems
             return lengthOfALine;
             //Console.WriteLine(lengthOfALine);
         }
-
     }
 }
