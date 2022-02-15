@@ -4,6 +4,15 @@ namespace lineOfLengthProblems
 {
     class lengthoflines
     {
+        public static void Main1(string[] args)
+        {
+            Console.WriteLine("Enter Co-ordinates of 1st Line");
+            double lengthOfALine = Main();
+            Console.WriteLine("Enter Co-ordinates of 2nd Line");
+            double lengthOfALine1 = Main();
+            string result = lengthOfALine.Equals(lengthOfALine1) == true ? "Two lines are equal" : "Two lines are not equal";
+            Console.WriteLine(result);
+        }
         public static double Main()
         {
 
